@@ -1,0 +1,325 @@
+@font-face {
+    font-family: 'Acme Secret Agent';
+    src: url('../fonts/acmesa.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* ESTILIZAÇÃO GERAL e INDEX */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Acme Secret Agent', sans-serif;
+    line-height: 1.6;
+    background-color: #111111;
+    animation: slideIn 0.5s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#video-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+
+    z-index: -2;
+}
+
+/* BARRA DE NAVEGAÇÃO FIXA */
+
+
+header {
+    background-color: #000000;
+    text-align: center;
+    padding: 20px 0 5px 0;
+    position: sticky;         /* Faz a barra fixar no topo ao rolar */
+    top: 0;
+    z-index: 1000;            /* Faz com que ela fique por cima de todo o conteudo */
+}
+
+#logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+/* Links do Menu */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 80px; /* Espaço entre os links */
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #727272; /* Efeito ao passar o mouse nos links */
+}
+
+/* CONTEÚDO DAS PÁGINAS */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 80px;
+    flex: 1;
+    width: 100%;
+}
+
+#poster-1 {
+    float: right;
+    width: 220px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    margin-top: 100px;
+}
+
+section {
+    margin-bottom: 60px;
+    padding-top: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+p {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+
+/* ESTILIZAÇÃO SPIN OFF */
+
+
+#poster-V {
+    float: right;
+    width: 220px;
+    margin-bottom: 10px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+#poster-V:hover {
+    transform: scale(1.02);
+}
+
+#poster-logoVR {
+    float: right;
+    width: 220px;
+    height: 140px;
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+#poster-logoVR:hover {
+    transform: scale(1.02);
+}
+
+
+/* ESTILIZAÇÃO PERSONAGENS */
+
+
+.titulo-elenco {
+    color: white;
+    padding-left: 200px;
+}
+
+.personagens {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /*Alinha cards lado a lado */
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.ator-card { /*Texto embaixo da foto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    text-align: center;
+}
+
+.ator-card img {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    border-radius: 20%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    margin-left: 140px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.ator-card img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+.ator-card p {
+    position: relative;
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+    margin-left: 140px;
+    width: 100%;
+}
+
+/* ESTILIZAÇÃO MÚSICAS */
+
+.lista-musicas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px 30px;
+    list-style: none;
+    padding: 0;
+    color:#ffffff
+}
+
+
+/* ESTILIZAÇÃO MEMES */
+
+
+.titulo-memes {
+    color: white;
+    padding-left: 200px;
+    margin-top: 30px;
+}
+
+.memes {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.linha-videos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid #d40000;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+footer span {
+    color: #d40000;
+    font-weight: bold;
+}
+
+.aviso {
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* ESTILIZAÇÃO JAVASCRIPT ACORDION*/
+
+
+#accordion {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#accordion h3 {
+    background: #111;
+    color: white;
+    border: 1px solid #333;
+    font-family: 'Acme Secret Agent', sans-serif;
+}
+
+#accordion div {
+    background: rgba(0,0,0,0.7);
+    color: white;
+}
+
+.ui-accordion-header-active {
+    background: #535353 !important;
+    color: white !important;
+}
+
+
+/* ESTILIZAÇÃO JAVASCRIPT SWUP */
+
+
+.transition-fade {
+    transition: 0.5s;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+html.is-animating .transition-fade {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+
+/* ESTILIZAÇÃO JAVASCRIPT POSTER */
+
+
+#poster-1 {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#poster-1:hover {
+    transform: scale(1.12);
+}
